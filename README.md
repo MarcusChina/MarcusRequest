@@ -12,8 +12,11 @@
 4、在具体的网络Manager中可以配置网络请求类型，网络请求url(url中可拼接参数但是不推荐)
 
 5、根据需要在特定的VC中发起网络请求，例如MSDemoViewController中发起MSTaoBaoSearchManager和MSDuoMiManager请求，
-   实现对应的代理方法：a).请求参数代理方法 -(NSDictionary *)paramsForApi:(MSAPIBaseManager *)manager
+   实现对应的代理方法：
+                     a).请求参数代理方法 -(NSDictionary *)paramsForApi:(MSAPIBaseManager *)manager
+                     
                      b).请求成功回调代理方法：-(void)managerCallAPIDidSuccess:(MSAPIBaseManager *)manager
+                     
                      c).请求失败回调代理方法: -(void)managerCallAPIDidFailed:(MSAPIBaseManager *)manager
 
 6、若VC销毁，该VC下所有的未完成的请求会自动取消。
