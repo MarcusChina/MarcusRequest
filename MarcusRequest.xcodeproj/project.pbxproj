@@ -1,0 +1,665 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C3218701DE6C5780000DD3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C32186F1DE6C5780000DD3D /* main.m */; };
+		2C3218731DE6C5780000DD3D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3218721DE6C5780000DD3D /* AppDelegate.m */; };
+		2C3218761DE6C5780000DD3D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3218751DE6C5780000DD3D /* ViewController.m */; };
+		2C3218791DE6C5780000DD3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C3218771DE6C5780000DD3D /* Main.storyboard */; };
+		2C32187B1DE6C5780000DD3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C32187A1DE6C5780000DD3D /* Assets.xcassets */; };
+		2C32187E1DE6C5780000DD3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C32187C1DE6C5780000DD3D /* LaunchScreen.storyboard */; };
+		2C3218891DE6C5780000DD3D /* MarcusRequestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3218881DE6C5780000DD3D /* MarcusRequestTests.m */; };
+		2C3218941DE6C5780000DD3D /* MarcusRequestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3218931DE6C5780000DD3D /* MarcusRequestUITests.m */; };
+		2C3218A91DE6C7070000DD3D /* MSAPIBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3218A41DE6C7070000DD3D /* MSAPIBaseManager.m */; };
+		2C3218AA1DE6C7070000DD3D /* MSNetWorkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3218A61DE6C7070000DD3D /* MSNetWorkingManager.m */; };
+		2C9924061DE6DF7800B0D9FB /* MSDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9924041DE6DF7800B0D9FB /* MSDemoViewController.m */; };
+		2C9924071DE6DF7800B0D9FB /* MSDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9924051DE6DF7800B0D9FB /* MSDemoViewController.xib */; };
+		2C99240D1DE6E5CB00B0D9FB /* MSTaoBaoSearchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C99240C1DE6E5CB00B0D9FB /* MSTaoBaoSearchManager.m */; };
+		2C9924101DE6E79500B0D9FB /* MSDuoMiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C99240F1DE6E79500B0D9FB /* MSDuoMiManager.m */; };
+		6699315088A9BDF63513FB50 /* libPods-MarcusRequest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D94FA87F270BEE3D1C149162 /* libPods-MarcusRequest.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2C3218851DE6C5780000DD3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C3218631DE6C5780000DD3D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C32186A1DE6C5780000DD3D;
+			remoteInfo = MarcusRequest;
+		};
+		2C3218901DE6C5780000DD3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C3218631DE6C5780000DD3D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C32186A1DE6C5780000DD3D;
+			remoteInfo = MarcusRequest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2C32186B1DE6C5780000DD3D /* MarcusRequest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarcusRequest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C32186F1DE6C5780000DD3D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2C3218711DE6C5780000DD3D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2C3218721DE6C5780000DD3D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2C3218741DE6C5780000DD3D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2C3218751DE6C5780000DD3D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2C3218781DE6C5780000DD3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2C32187A1DE6C5780000DD3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2C32187D1DE6C5780000DD3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2C32187F1DE6C5780000DD3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C3218841DE6C5780000DD3D /* MarcusRequestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarcusRequestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C3218881DE6C5780000DD3D /* MarcusRequestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarcusRequestTests.m; sourceTree = "<group>"; };
+		2C32188A1DE6C5780000DD3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C32188F1DE6C5780000DD3D /* MarcusRequestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarcusRequestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C3218931DE6C5780000DD3D /* MarcusRequestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarcusRequestUITests.m; sourceTree = "<group>"; };
+		2C3218951DE6C5780000DD3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C3218A31DE6C7070000DD3D /* MSAPIBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAPIBaseManager.h; sourceTree = "<group>"; };
+		2C3218A41DE6C7070000DD3D /* MSAPIBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSAPIBaseManager.m; sourceTree = "<group>"; };
+		2C3218A51DE6C7070000DD3D /* MSNetWorkingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSNetWorkingManager.h; sourceTree = "<group>"; };
+		2C3218A61DE6C7070000DD3D /* MSNetWorkingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSNetWorkingManager.m; sourceTree = "<group>"; };
+		2C9924031DE6DF7800B0D9FB /* MSDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSDemoViewController.h; sourceTree = "<group>"; };
+		2C9924041DE6DF7800B0D9FB /* MSDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDemoViewController.m; sourceTree = "<group>"; };
+		2C9924051DE6DF7800B0D9FB /* MSDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MSDemoViewController.xib; sourceTree = "<group>"; };
+		2C99240B1DE6E5CB00B0D9FB /* MSTaoBaoSearchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTaoBaoSearchManager.h; sourceTree = "<group>"; };
+		2C99240C1DE6E5CB00B0D9FB /* MSTaoBaoSearchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTaoBaoSearchManager.m; sourceTree = "<group>"; };
+		2C99240E1DE6E79500B0D9FB /* MSDuoMiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSDuoMiManager.h; sourceTree = "<group>"; };
+		2C99240F1DE6E79500B0D9FB /* MSDuoMiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDuoMiManager.m; sourceTree = "<group>"; };
+		6DB0B74DF84A5DD0C2E0BC98 /* Pods-MarcusRequest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarcusRequest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarcusRequest/Pods-MarcusRequest.debug.xcconfig"; sourceTree = "<group>"; };
+		D6AFF5A512944CA1371BB07C /* Pods-MarcusRequest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarcusRequest.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarcusRequest/Pods-MarcusRequest.release.xcconfig"; sourceTree = "<group>"; };
+		D94FA87F270BEE3D1C149162 /* libPods-MarcusRequest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MarcusRequest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C3218681DE6C5780000DD3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6699315088A9BDF63513FB50 /* libPods-MarcusRequest.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C3218811DE6C5780000DD3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C32188C1DE6C5780000DD3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C3218621DE6C5780000DD3D = {
+			isa = PBXGroup;
+			children = (
+				2C32186D1DE6C5780000DD3D /* MarcusRequest */,
+				2C3218871DE6C5780000DD3D /* MarcusRequestTests */,
+				2C3218921DE6C5780000DD3D /* MarcusRequestUITests */,
+				2C32186C1DE6C5780000DD3D /* Products */,
+				A4355A3D6DB3AF6ECB6A791A /* Pods */,
+				9DE5BDB4BE8173F2840EF179 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2C32186C1DE6C5780000DD3D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C32186B1DE6C5780000DD3D /* MarcusRequest.app */,
+				2C3218841DE6C5780000DD3D /* MarcusRequestTests.xctest */,
+				2C32188F1DE6C5780000DD3D /* MarcusRequestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2C32186D1DE6C5780000DD3D /* MarcusRequest */ = {
+			isa = PBXGroup;
+			children = (
+				2C3218A21DE6C7070000DD3D /* MSRequstManager */,
+				2C3218A11DE6C66B0000DD3D /* MSDemo */,
+				2C32186E1DE6C5780000DD3D /* Supporting Files */,
+			);
+			path = MarcusRequest;
+			sourceTree = "<group>";
+		};
+		2C32186E1DE6C5780000DD3D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C32186F1DE6C5780000DD3D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2C3218871DE6C5780000DD3D /* MarcusRequestTests */ = {
+			isa = PBXGroup;
+			children = (
+				2C3218881DE6C5780000DD3D /* MarcusRequestTests.m */,
+				2C32188A1DE6C5780000DD3D /* Info.plist */,
+			);
+			path = MarcusRequestTests;
+			sourceTree = "<group>";
+		};
+		2C3218921DE6C5780000DD3D /* MarcusRequestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2C3218931DE6C5780000DD3D /* MarcusRequestUITests.m */,
+				2C3218951DE6C5780000DD3D /* Info.plist */,
+			);
+			path = MarcusRequestUITests;
+			sourceTree = "<group>";
+		};
+		2C3218A11DE6C66B0000DD3D /* MSDemo */ = {
+			isa = PBXGroup;
+			children = (
+				2C3218711DE6C5780000DD3D /* AppDelegate.h */,
+				2C3218721DE6C5780000DD3D /* AppDelegate.m */,
+				2C3218741DE6C5780000DD3D /* ViewController.h */,
+				2C3218751DE6C5780000DD3D /* ViewController.m */,
+				2C3218771DE6C5780000DD3D /* Main.storyboard */,
+				2C99240B1DE6E5CB00B0D9FB /* MSTaoBaoSearchManager.h */,
+				2C99240C1DE6E5CB00B0D9FB /* MSTaoBaoSearchManager.m */,
+				2C99240E1DE6E79500B0D9FB /* MSDuoMiManager.h */,
+				2C99240F1DE6E79500B0D9FB /* MSDuoMiManager.m */,
+				2C9924031DE6DF7800B0D9FB /* MSDemoViewController.h */,
+				2C9924041DE6DF7800B0D9FB /* MSDemoViewController.m */,
+				2C9924051DE6DF7800B0D9FB /* MSDemoViewController.xib */,
+				2C32187A1DE6C5780000DD3D /* Assets.xcassets */,
+				2C32187C1DE6C5780000DD3D /* LaunchScreen.storyboard */,
+				2C32187F1DE6C5780000DD3D /* Info.plist */,
+			);
+			name = MSDemo;
+			sourceTree = "<group>";
+		};
+		2C3218A21DE6C7070000DD3D /* MSRequstManager */ = {
+			isa = PBXGroup;
+			children = (
+				2C3218A31DE6C7070000DD3D /* MSAPIBaseManager.h */,
+				2C3218A41DE6C7070000DD3D /* MSAPIBaseManager.m */,
+				2C3218A51DE6C7070000DD3D /* MSNetWorkingManager.h */,
+				2C3218A61DE6C7070000DD3D /* MSNetWorkingManager.m */,
+			);
+			path = MSRequstManager;
+			sourceTree = "<group>";
+		};
+		9DE5BDB4BE8173F2840EF179 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D94FA87F270BEE3D1C149162 /* libPods-MarcusRequest.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A4355A3D6DB3AF6ECB6A791A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6DB0B74DF84A5DD0C2E0BC98 /* Pods-MarcusRequest.debug.xcconfig */,
+				D6AFF5A512944CA1371BB07C /* Pods-MarcusRequest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2C32186A1DE6C5780000DD3D /* MarcusRequest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C3218981DE6C5780000DD3D /* Build configuration list for PBXNativeTarget "MarcusRequest" */;
+			buildPhases = (
+				7673467B96400A5EAEAC06C6 /* [CP] Check Pods Manifest.lock */,
+				2C3218671DE6C5780000DD3D /* Sources */,
+				2C3218681DE6C5780000DD3D /* Frameworks */,
+				2C3218691DE6C5780000DD3D /* Resources */,
+				AE4F5D027756A384D957F0D3 /* [CP] Embed Pods Frameworks */,
+				684682E129602D776841EDB8 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MarcusRequest;
+			productName = MarcusRequest;
+			productReference = 2C32186B1DE6C5780000DD3D /* MarcusRequest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2C3218831DE6C5780000DD3D /* MarcusRequestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C32189B1DE6C5780000DD3D /* Build configuration list for PBXNativeTarget "MarcusRequestTests" */;
+			buildPhases = (
+				2C3218801DE6C5780000DD3D /* Sources */,
+				2C3218811DE6C5780000DD3D /* Frameworks */,
+				2C3218821DE6C5780000DD3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2C3218861DE6C5780000DD3D /* PBXTargetDependency */,
+			);
+			name = MarcusRequestTests;
+			productName = MarcusRequestTests;
+			productReference = 2C3218841DE6C5780000DD3D /* MarcusRequestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2C32188E1DE6C5780000DD3D /* MarcusRequestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C32189E1DE6C5780000DD3D /* Build configuration list for PBXNativeTarget "MarcusRequestUITests" */;
+			buildPhases = (
+				2C32188B1DE6C5780000DD3D /* Sources */,
+				2C32188C1DE6C5780000DD3D /* Frameworks */,
+				2C32188D1DE6C5780000DD3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2C3218911DE6C5780000DD3D /* PBXTargetDependency */,
+			);
+			name = MarcusRequestUITests;
+			productName = MarcusRequestUITests;
+			productReference = 2C32188F1DE6C5780000DD3D /* MarcusRequestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2C3218631DE6C5780000DD3D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = marcus;
+				TargetAttributes = {
+					2C32186A1DE6C5780000DD3D = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = S5T3KG8NJE;
+						ProvisioningStyle = Automatic;
+					};
+					2C3218831DE6C5780000DD3D = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2C32186A1DE6C5780000DD3D;
+					};
+					2C32188E1DE6C5780000DD3D = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2C32186A1DE6C5780000DD3D;
+					};
+				};
+			};
+			buildConfigurationList = 2C3218661DE6C5780000DD3D /* Build configuration list for PBXProject "MarcusRequest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2C3218621DE6C5780000DD3D;
+			productRefGroup = 2C32186C1DE6C5780000DD3D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2C32186A1DE6C5780000DD3D /* MarcusRequest */,
+				2C3218831DE6C5780000DD3D /* MarcusRequestTests */,
+				2C32188E1DE6C5780000DD3D /* MarcusRequestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2C3218691DE6C5780000DD3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C32187E1DE6C5780000DD3D /* LaunchScreen.storyboard in Resources */,
+				2C9924071DE6DF7800B0D9FB /* MSDemoViewController.xib in Resources */,
+				2C32187B1DE6C5780000DD3D /* Assets.xcassets in Resources */,
+				2C3218791DE6C5780000DD3D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C3218821DE6C5780000DD3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C32188D1DE6C5780000DD3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		684682E129602D776841EDB8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MarcusRequest/Pods-MarcusRequest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7673467B96400A5EAEAC06C6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AE4F5D027756A384D957F0D3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MarcusRequest/Pods-MarcusRequest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2C3218671DE6C5780000DD3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C3218AA1DE6C7070000DD3D /* MSNetWorkingManager.m in Sources */,
+				2C9924061DE6DF7800B0D9FB /* MSDemoViewController.m in Sources */,
+				2C3218761DE6C5780000DD3D /* ViewController.m in Sources */,
+				2C3218A91DE6C7070000DD3D /* MSAPIBaseManager.m in Sources */,
+				2C9924101DE6E79500B0D9FB /* MSDuoMiManager.m in Sources */,
+				2C99240D1DE6E5CB00B0D9FB /* MSTaoBaoSearchManager.m in Sources */,
+				2C3218731DE6C5780000DD3D /* AppDelegate.m in Sources */,
+				2C3218701DE6C5780000DD3D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C3218801DE6C5780000DD3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C3218891DE6C5780000DD3D /* MarcusRequestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C32188B1DE6C5780000DD3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C3218941DE6C5780000DD3D /* MarcusRequestUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2C3218861DE6C5780000DD3D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C32186A1DE6C5780000DD3D /* MarcusRequest */;
+			targetProxy = 2C3218851DE6C5780000DD3D /* PBXContainerItemProxy */;
+		};
+		2C3218911DE6C5780000DD3D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C32186A1DE6C5780000DD3D /* MarcusRequest */;
+			targetProxy = 2C3218901DE6C5780000DD3D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2C3218771DE6C5780000DD3D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C3218781DE6C5780000DD3D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2C32187C1DE6C5780000DD3D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C32187D1DE6C5780000DD3D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2C3218961DE6C5780000DD3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2C3218971DE6C5780000DD3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2C3218991DE6C5780000DD3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DB0B74DF84A5DD0C2E0BC98 /* Pods-MarcusRequest.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = S5T3KG8NJE;
+				INFOPLIST_FILE = MarcusRequest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.marcus.MarcusRequest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2C32189A1DE6C5780000DD3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6AFF5A512944CA1371BB07C /* Pods-MarcusRequest.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = S5T3KG8NJE;
+				INFOPLIST_FILE = MarcusRequest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.marcus.MarcusRequest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2C32189C1DE6C5780000DD3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MarcusRequestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.marcus.MarcusRequestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarcusRequest.app/MarcusRequest";
+			};
+			name = Debug;
+		};
+		2C32189D1DE6C5780000DD3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MarcusRequestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.marcus.MarcusRequestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarcusRequest.app/MarcusRequest";
+			};
+			name = Release;
+		};
+		2C32189F1DE6C5780000DD3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MarcusRequestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.marcus.MarcusRequestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MarcusRequest;
+			};
+			name = Debug;
+		};
+		2C3218A01DE6C5780000DD3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MarcusRequestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.marcus.MarcusRequestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MarcusRequest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C3218661DE6C5780000DD3D /* Build configuration list for PBXProject "MarcusRequest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C3218961DE6C5780000DD3D /* Debug */,
+				2C3218971DE6C5780000DD3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C3218981DE6C5780000DD3D /* Build configuration list for PBXNativeTarget "MarcusRequest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C3218991DE6C5780000DD3D /* Debug */,
+				2C32189A1DE6C5780000DD3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C32189B1DE6C5780000DD3D /* Build configuration list for PBXNativeTarget "MarcusRequestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C32189C1DE6C5780000DD3D /* Debug */,
+				2C32189D1DE6C5780000DD3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C32189E1DE6C5780000DD3D /* Build configuration list for PBXNativeTarget "MarcusRequestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C32189F1DE6C5780000DD3D /* Debug */,
+				2C3218A01DE6C5780000DD3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2C3218631DE6C5780000DD3D /* Project object */;
+}
