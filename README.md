@@ -13,6 +13,7 @@
 
 5、根据需要在特定的VC中发起网络请求，例如MSDemoViewController中发起MSTaoBaoSearchManager和MSDuoMiManager请求，
    实现对应的代理方法：
+                    
                      a).请求参数代理方法 -(NSDictionary *)paramsForApi:(MSAPIBaseManager *)manager
                      
                      b).请求成功回调代理方法：-(void)managerCallAPIDidSuccess:(MSAPIBaseManager *)manager
