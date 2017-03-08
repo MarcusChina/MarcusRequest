@@ -97,8 +97,7 @@
     // 请求失败时的回调
     void (^failureWrap)(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) = ^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error){
         if (fail) {
-            AFNetworkReachabilityManager *manager = [AFNetworkReachabilityManager sharedManager];
-            fail(nil,manager.isReachable ? MSAPIManagerErrorTypeNoNetWork : MSAPIManagerErrorTypeTimeout);
+            fail(nil,[self errorTypeWithCode:error.code]);
         }
     };
     
@@ -195,8 +194,13 @@
     return [fixedParams copy];
 }
 
+#pragma mark --取消当前所有网络请求
+- (void)cancelAllRequest {
+    [self.sessionManager.operationQueue cancelAllOperations];
+}
 
-#pragma mark 根据需要设置安全策略
+
+#pragma mark --根据需要设置安全策略
 - (AFSecurityPolicy *)creatCustomPolicy
 {
     AFSecurityPolicy *policy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
@@ -204,10 +208,32 @@
     return policy;
 }
 
-#pragma mark 根据需要设置请求头信息
+#pragma mark --根据需要设置请求头信息
 - (void)formatRequestHeader
 {
     [_sessionManager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
 }
+
+#pragma makr --解析错误码
+- (MSAPIManagerErrorType)errorTypeWithCode:(NSInteger)code {
+    MSAPIManagerErrorType errorType = MSAPIManagerErrorTypeDefault;
+    if (code == -1) {
+        errorType = MSAPIManagerErrorTypeUnknown;
+    }else if (code == -999 || code == -1012) {
+        errorType = MSAPIManagerErrorTypeCancelled;
+    }else if (code == -1000) {
+        errorType = MSAPIManagerErrorTypeInvalidURL;
+    }else if (code == -1001) {
+        errorType = MSAPIManagerErrorTypeTimeout;
+    }else if (code == -1103) {
+        errorType = MSAPIManagerErrorTypeNoContent;
+    }else if (code == -1005 || code == -1009) {
+        errorType = MSAPIManagerErrorTypeNoNetWork;
+    }else {
+        errorType = MSAPIManagerErrorTypeNoHost;
+    }
+    return errorType;
+}
+
 
 @end

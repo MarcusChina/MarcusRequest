@@ -55,6 +55,4 @@
 //使用loadData这个方法来请求数据,这个方法会通过param source来获得参数，这使得参数的生成逻辑位于controller中的固定位置
 - (void)loadData;
 
-- (void)cancelAllRequest;
-
 @end

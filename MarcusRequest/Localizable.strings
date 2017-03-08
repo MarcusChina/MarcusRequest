@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  MarcusRequest
+
+  Created by marcus on 2017/3/8.
+  Copyright © 2017年 marcus. All rights reserved.
+*/
+
+//network
+"APIManagerErrorTypeDefault"             = "网络请求错误，请检查网络";
+"APIManagerErrorTypeNoNetwork"           = "网络请求错误，请检查网络";
+"APIManagerErrorTypeTimeout"             = "网络请求超时，请检查网络";
+"APIManagerErrorTypeParamsError"         = "参数错误，请求失败";
+"APIManagerErrorTypeNoNetWork"           = "当前无网络，请求失败";
+"APIManagerErrorTypeInvalidURL"          = "无效的URL，请求失败";
+"APIManagerErrorTypeNoHost"              = "服务器异常，请求失败";
+"APIManagerErrorTypeCancelled"           = "网络取消，请求失败";
+"APIManagerErrorTypeUnknown"             = "未知错误，请求失败";

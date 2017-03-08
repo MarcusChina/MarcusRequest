@@ -15,6 +15,8 @@
 @property (nonatomic, strong) NSArray *actorList;
 @property (nonatomic, strong) MSTaoBaoSearchManager *taoBaoSearchManager;
 @property (nonatomic, strong) NSMutableArray *duoMiArray;
+@property (nonatomic, strong) NSMutableArray *dataArray;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -36,8 +38,9 @@
     
     self.actorList = @[@"刘德华",@"张学友",@"王心凌",@"张杰",@"光良",@"陈奕迅",@"王力宏",@"汪峰",@"莫文蔚",@"王菲"];
     self.duoMiArray = [[NSMutableArray alloc]init];
+    self.dataArray = [[NSMutableArray alloc]init];
     //请求列表中歌手的歌曲,循环请求,为了更好地演示网络请求自动取消的情况
-    for (int i=0; i<3; i++) {
+    for (int i=0; i<6; i++) {
         for (NSString *actorName in self.actorList) {
             MSDuoMiManager *duoMiManager = [[MSDuoMiManager alloc]init];
             [self.duoMiArray addObject:duoMiManager];
@@ -59,7 +62,6 @@
         [params setObject:@"刘德华" forKey:@"kw"];
         [params setObject:@"0" forKey:@"pi"];
         [params setObject:@"1000" forKey:@"pz"];
-
     }
     return params;
 }
@@ -72,12 +74,35 @@
         NSArray *tracks = [manager.responseObject objectForKey:@"tracks"];
         for (NSDictionary *tempDic in tracks) {
             NSLog(@"\n %@：%@",manager.requestMark,[tempDic objectForKey:@"title"]);
+            [self.dataArray addObject:[tempDic objectForKey:@"title"]];
+            [self.tableView reloadData];
         }
     }
 }
 
 - (void)managerCallAPIDidFailed:(MSAPIBaseManager *)manager {
     NSLog(@"失败原因：%@",manager.errorMessage);
+}
+
+#pragma mark - UITableViewDataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.dataArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID"];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellID"];
+    }
+    cell.textLabel.text = self.dataArray[indexPath.row];
+    return cell;
 }
 
 @end

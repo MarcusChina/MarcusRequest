@@ -21,6 +21,7 @@
 		2C9924071DE6DF7800B0D9FB /* MSDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9924051DE6DF7800B0D9FB /* MSDemoViewController.xib */; };
 		2C99240D1DE6E5CB00B0D9FB /* MSTaoBaoSearchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C99240C1DE6E5CB00B0D9FB /* MSTaoBaoSearchManager.m */; };
 		2C9924101DE6E79500B0D9FB /* MSDuoMiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C99240F1DE6E79500B0D9FB /* MSDuoMiManager.m */; };
+		2CCB86341E6FB7C400DFF015 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CCB86331E6FB7C400DFF015 /* Localizable.strings */; };
 		6699315088A9BDF63513FB50 /* libPods-MarcusRequest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D94FA87F270BEE3D1C149162 /* libPods-MarcusRequest.a */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		2C99240C1DE6E5CB00B0D9FB /* MSTaoBaoSearchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTaoBaoSearchManager.m; sourceTree = "<group>"; };
 		2C99240E1DE6E79500B0D9FB /* MSDuoMiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSDuoMiManager.h; sourceTree = "<group>"; };
 		2C99240F1DE6E79500B0D9FB /* MSDuoMiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDuoMiManager.m; sourceTree = "<group>"; };
+		2CCB86331E6FB7C400DFF015 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		6DB0B74DF84A5DD0C2E0BC98 /* Pods-MarcusRequest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarcusRequest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarcusRequest/Pods-MarcusRequest.debug.xcconfig"; sourceTree = "<group>"; };
 		D6AFF5A512944CA1371BB07C /* Pods-MarcusRequest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarcusRequest.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarcusRequest/Pods-MarcusRequest.release.xcconfig"; sourceTree = "<group>"; };
 		D94FA87F270BEE3D1C149162 /* libPods-MarcusRequest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MarcusRequest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				2C32186F1DE6C5780000DD3D /* main.m */,
+				2CCB86331E6FB7C400DFF015 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CCB86341E6FB7C400DFF015 /* Localizable.strings in Resources */,
 				2C32187E1DE6C5780000DD3D /* LaunchScreen.storyboard in Resources */,
 				2C9924071DE6DF7800B0D9FB /* MSDemoViewController.xib in Resources */,
 				2C32187B1DE6C5780000DD3D /* Assets.xcassets in Resources */,

@@ -62,7 +62,6 @@
             }
         }
     } fail:^(id responseObject, MSAPIManagerErrorType errorType) {
-         NSLog(@"请求失败：%@ %@\n",weakSelf,weakSelf.task);
         weakSelf.errorType = errorType;
         switch (weakSelf.errorType) {
             case MSAPIManagerErrorTypeNoNetWork:
@@ -76,11 +75,33 @@
             case MSAPIManagerErrorTypeTimeout:
                 weakSelf.errorMessage = NSLocalizedString(@"APIManagerErrorTypeTimeout", nil);
                 break;
+             
+            case MSAPIManagerErrorTypeParamsError:
+                weakSelf.errorMessage = NSLocalizedString(@"APIManagerErrorTypeParamsError", nil);
+                break;
+                
+            case MSAPIManagerErrorTypeInvalidURL:
+                weakSelf.errorMessage = NSLocalizedString(@"APIManagerErrorTypeInvalidURL", nil);
+                break;
+                
+            case MSAPIManagerErrorTypeNoHost:
+                weakSelf.errorMessage = NSLocalizedString(@"APIManagerErrorTypeNoHost", nil);
+                break;
+                
+            case MSAPIManagerErrorTypeCancelled:
+                weakSelf.errorMessage = NSLocalizedString(@"APIManagerErrorTypeCancelled", nil);
+                break;
+                
+            case MSAPIManagerErrorTypeUnknown:
+                weakSelf.errorMessage = NSLocalizedString(@"APIManagerErrorTypeUnknown", nil);
+                break;
                 
             default:
                 weakSelf.errorMessage = @"";
                 break;
         }
+        NSLog(@"请求失败：%@ %@ errorMessage:%@ \n",weakSelf,weakSelf.task,weakSelf.errorMessage);
+
         if (weakSelf.delegate) {
             if ([weakSelf.delegate respondsToSelector:@selector(managerCallAPIDidFailed:)]) {
                 [weakSelf.delegate managerCallAPIDidFailed:weakSelf];
@@ -91,10 +112,10 @@
 }
 
 - (void)dealloc {
-    [self cancelAllRequest];
+    [self cancelRequest];
 }
 
-- (void)cancelAllRequest {
+- (void)cancelRequest {
     if (self.task) {
         NSLog(@"取消数据请求 %@ %@\n",self,self.task);
         [self.task cancel];
