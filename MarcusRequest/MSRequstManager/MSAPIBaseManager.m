@@ -9,6 +9,24 @@
 #import "MSAPIBaseManager.h"
 #import "MSNetWorkingManager.h"
 
+//DEBUG 时，打印出相应请求数据
+
+#ifdef DEBUG
+#define MSRequestLog(__result_,__ViewControllerName_, __Url_, __Type_, __Params_, __ResponseData_) \
+fprintf(stderr, "\n\n================ 数据请求%s(%s): ================\n",__result_.UTF8String,__ViewControllerName_.UTF8String); \
+fprintf(stderr, "-- RequestUrl: %s\n", __Url_.UTF8String); \
+fprintf(stderr, "-- Type: %s (0:Get 1:Post 2:Upload 3:Download)\n", __Type_.UTF8String); \
+if (__Params_) {\
+fprintf(stderr, "-- Params: %s\n", [NSString stringWithFormat:@"%@", __Params_].UTF8String); \
+} \
+if (__ResponseData_) {\
+fprintf(stderr, "-- ResponseData: %s\n", [NSString stringWithFormat:@"%@", __ResponseData_].UTF8String); \
+}\
+fprintf(stderr, "===========================================================================\n\n\n");
+#else
+#define MSRequestLog(__ViewControllerName_,__Url_, __Type_, __Params_, __ResponseData_)
+#endif
+
 @interface MSAPIBaseManager()
 @property (nonatomic, copy, readwrite) NSString *errorMessage;
 @property (nonatomic, readwrite) MSAPIManagerErrorType errorType;
@@ -44,7 +62,8 @@
     
    __weak __typeof(self)weakSelf = self;
     self.task = [[MSNetWorkingManager sharedManager]callApiWithUrl:self.requestUrl params:self.params?:@{} requestType:self.requestType success:^(id responseObject, MSAPIManagerErrorType errorType) {
-        NSLog(@"请求成功：%@ %@\n",weakSelf,weakSelf.task);
+        NSString * requestType = [NSString stringWithFormat:@"%lu",(unsigned long)weakSelf.requestType];
+        MSRequestLog(@"成功",NSStringFromClass([weakSelf class]), weakSelf.requestUrl, requestType, weakSelf.params, responseObject);
         if (weakSelf.delegate) {
             if (errorType == MSAPIManagerErrorTypeSuccess) {
                 weakSelf.errorType = MSAPIManagerErrorTypeSuccess;
@@ -62,45 +81,51 @@
             }
         }
     } fail:^(id responseObject, MSAPIManagerErrorType errorType) {
-        weakSelf.errorType = errorType;
-        switch (weakSelf.errorType) {
+        NSString * errorMessage = @"";
+        switch (errorType) {
             case MSAPIManagerErrorTypeNoNetWork:
-                weakSelf.errorMessage = NSLocalizedString(@"APIManagerErrorTypeNoNetwork", nil);
+                errorMessage = NSLocalizedString(@"APIManagerErrorTypeNoNetwork", nil);
                 break;
                 
             case MSAPIManagerErrorTypeDefault:
-                weakSelf.errorMessage = NSLocalizedString(@"APIManagerErrorTypeDefault", nil);
+                errorMessage = NSLocalizedString(@"APIManagerErrorTypeDefault", nil);
                 break;
                 
             case MSAPIManagerErrorTypeTimeout:
-                weakSelf.errorMessage = NSLocalizedString(@"APIManagerErrorTypeTimeout", nil);
+                errorMessage = NSLocalizedString(@"APIManagerErrorTypeTimeout", nil);
                 break;
              
             case MSAPIManagerErrorTypeParamsError:
-                weakSelf.errorMessage = NSLocalizedString(@"APIManagerErrorTypeParamsError", nil);
+                errorMessage = NSLocalizedString(@"APIManagerErrorTypeParamsError", nil);
                 break;
                 
             case MSAPIManagerErrorTypeInvalidURL:
-                weakSelf.errorMessage = NSLocalizedString(@"APIManagerErrorTypeInvalidURL", nil);
+                errorMessage = NSLocalizedString(@"APIManagerErrorTypeInvalidURL", nil);
                 break;
                 
             case MSAPIManagerErrorTypeNoHost:
-                weakSelf.errorMessage = NSLocalizedString(@"APIManagerErrorTypeNoHost", nil);
+                errorMessage = NSLocalizedString(@"APIManagerErrorTypeNoHost", nil);
                 break;
                 
             case MSAPIManagerErrorTypeCancelled:
-                weakSelf.errorMessage = NSLocalizedString(@"APIManagerErrorTypeCancelled", nil);
+                errorMessage = NSLocalizedString(@"APIManagerErrorTypeCancelled", nil);
                 break;
                 
             case MSAPIManagerErrorTypeUnknown:
-                weakSelf.errorMessage = NSLocalizedString(@"APIManagerErrorTypeUnknown", nil);
+                errorMessage = NSLocalizedString(@"APIManagerErrorTypeUnknown", nil);
                 break;
                 
             default:
-                weakSelf.errorMessage = @"";
+                errorMessage = @"";
                 break;
         }
-        NSLog(@"请求失败：%@ %@ errorMessage:%@ \n",weakSelf,weakSelf.task,weakSelf.errorMessage);
+        
+        NSString * requestType = [NSString stringWithFormat:@"%lu",(unsigned long)weakSelf.requestType];
+        NSString * error = [NSString stringWithFormat:@"失败-->原因:%@",errorMessage];
+        MSRequestLog(error,NSStringFromClass([weakSelf class]), weakSelf.requestUrl, requestType, weakSelf.params, responseObject);
+        
+        weakSelf.errorType = errorType;
+        weakSelf.errorMessage = errorMessage;
 
         if (weakSelf.delegate) {
             if ([weakSelf.delegate respondsToSelector:@selector(managerCallAPIDidFailed:)]) {

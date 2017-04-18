@@ -14,5 +14,5 @@
 "APIManagerErrorTypeNoNetWork"           = "当前无网络，请求失败";
 "APIManagerErrorTypeInvalidURL"          = "无效的URL，请求失败";
 "APIManagerErrorTypeNoHost"              = "服务器异常，请求失败";
-"APIManagerErrorTypeCancelled"           = "网络取消，请求失败";
+"APIManagerErrorTypeCancelled"           = "取消网络请求，请求失败";
 "APIManagerErrorTypeUnknown"             = "未知错误，请求失败";
